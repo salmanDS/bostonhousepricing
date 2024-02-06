@@ -1,0 +1,45 @@
+<html>
+    
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="login" style="background-color:lightblue;">
+    <h1 style="font-family:Pacifico;">Boston House Price Prediction</h1>
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post" style="border:2px solid black; padding:10px;">
+      <input type="text" name="CRIM" placeholder="CRIM" required="required" style="color:white;" /><br>
+      <input type="text" name="ZN" placeholder="ZN" required="required" style="color:white;" /><br>
+      <input type="text" name="INDUS" placeholder="INDUS" required="required" style="color:white;" /><br>
+      <input type="text" name="CHAS" placeholder="CHAS" required="required" style="color:white;" /><br>
+      <input type="text" name="NOX" placeholder="NOX" required="required" style="color:white;" /><br>
+      <input type="text" name="RM" placeholder="RM" required="required" style="color:white;" /><br>
+      <input type="text" name="Age" placeholder="Age" required="required" style="color:white;" /><br>
+      <input type="text" name="DIS" placeholder="DIS" required="required" style="color:white;" /><br>
+      <input type="text" name="RAD" placeholder="RAD" required="required" style="color:white;" /><br>
+      <input type="text" name="TAX" placeholder="TAX" required="required" style="color:white;" /><br>
+      <input type="text" name="PTRATIO" placeholder="PTRATIO" required="required" style="color:white;" /><br>
+      <input type="text" name="B" placeholder="B" required="required" style="color:white;" /><br>
+      <input type="text" name="LSTAT" placeholder="LSTAT" required="required" style="color:white;" /><br>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large" style="font-family:Arimo; border:2px solid black; margin:5px;">Predict</button>
+    </form>
+
+    <br>
+    <br>
+
+
+  </div>
+  {{prediction_text}}
+
+</body>
+
+</html>
